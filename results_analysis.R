@@ -1,5 +1,6 @@
 library(varclust)
 library(RcppEigen) # for linear models
+#valerie`first change
 
 K           <- 40 #number of clusters currently checked
 filename1   <- "results/mlcc_res40.RData" #name of the file in which results of mlcc.reps are stored
