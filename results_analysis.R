@@ -2,8 +2,8 @@ library(varclust)
 library(RcppEigen) # for linear models
 
 K           <- 40 #number of clusters currently checked
-filename1   <- "mlcc_res40.RData" #name of the file in which results of mlcc.reps are stored
-filename2   <- "valerie_data.txt" #name of the file woth Valerie's data
+filename1   <- "results/mlcc_res40.RData" #name of the file in which results of mlcc.reps are stored
+filename2   <- "valerie_data.txt" #name of the file with Valerie's data
 load(filename1) #now the result are inside res variable
 res40 <- get("res") #assign the results to a variable with more meaningful name
 x <- t(read.table(file=filename2, header=T))
