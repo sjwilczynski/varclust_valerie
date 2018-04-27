@@ -2,20 +2,20 @@ library(varclust)
 library(RcppEigen) # for linear models
 
 K           <- 40 #number of clusters currently checked
-filename1   <- "mlcc_res40.RData" #name of the file woth Valerie's data
-filename2   <- "valerie_data.txt" #name of the file in which results of mlcc.reps are stored
-load(filename2) #now the result are inside res variable
+filename1   <- "mlcc_res40.RData" #name of the file in which results of mlcc.reps are stored
+filename2   <- "valerie_data.txt" #name of the file woth Valerie's data
+load(filename1) #now the result are inside res variable
 res40 <- get("res") #assign the results to a variable with more meaningful name
-x <- t(read.table(file=filename1, header=T))
-dims <- sapply(res$basis, ncol) #you can for example check dimensionalities of each subpace
-#print(paste("Dimensionalities are: ", dims))
-#hist(dims) You can also plot a histogram
-lens <- NULL; 
+x <- t(read.table(file=filename2, header=T))
+cluster_dimensionalities <- sapply(res$basis, ncol) #you can for example check dimensionalities of each subpace
+#print(paste("Dimensionalities are: ", cluster_dimensionalities))
+#hist(cluster_dimensionalities) You can also plot a histogram
+number_of_variables <- NULL; 
 for(i in 1:K){
-    lens <- c(lens, length(which(res$segmentation==i))) #you can find how many variables are in each cluster
+    number_of_variables <- c(number_of_variables, length(which(res$segmentation==i))) #you can find how many variables are in each cluster
 }
-#print(paste("Number of variables in each cluster: ", lens))
-#hist(lens)  You can also plot a histogram
+#print(paste("Number of variables in each cluster: ", number_of_variables))
+#hist(number_of_variables)  You can also plot a histogram
 
 ind <- 1
 cl <- which(res$segmentation==ind) # you can check which variables are in the first cluster
