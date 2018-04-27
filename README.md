@@ -8,7 +8,7 @@ And here is a short summary of most important commands(if you don't understand s
 
 ```bash
 git clone https://github.com/sjwilczynski/varclust_valerie.git # download this repository to the computer (you can do this on calc in LAREMA)
-git add . # add all unstaged files
+git add . # add all unstaged local changes
 git commit -m "message" # commit your changes to the local repository (change message to a description of what you did in this commit)
 git push origin master # push the changes to the remote so that everybody could see/download them
 ##############################################
