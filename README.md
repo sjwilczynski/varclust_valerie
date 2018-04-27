@@ -34,3 +34,15 @@ K           <- 40 #number of clusters currently checked
 filename1   <- "mlcc_res40.RData" #name of the file in which results of mlcc.reps are stored
 filename2   <- "valerie_data.txt" #name of the file with Valerie's data
 ```
+
+How to go analyse the object returned by varclust? You can of course check out the documentation: [mlcc.reps](https://github.com/sjwilczynski/varclust/blob/master/R/mlcc.reps.R). Here are some basics. Lets imagine you have a result of varclust for 40 clusters stored in *res40* variable then there are 3 elements of the returned object:
+
+```r
+res40$segmentation #an array, a partition of variables into clusters. On the i-th element indices the index of clusters to which i-th variable was assigned.
+res40$BIC # Value of mBIC criterion for returned clustering - the bigger the value, the better is the clustering (at least for the algorithm)
+res40$basis # A list containing factors. An i-th element of the list are the factors/principal components for i-th cluster.
+#Examples
+which(res40$segmentation==i) #returns indices of variables in i-th cluster
+plot(c(1,2,3,4), c(res10$BIC, res20$BIC, res30$BIC, res40$BIC,)) #plots values of mBIC criterion for different number of clusters
+ncol(res40$bais[[2]]) - #number of factors(dimensionality) for 2nd cluster
+```
