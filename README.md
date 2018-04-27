@@ -7,7 +7,7 @@
 
 ## A bit more about varclust
 
-In the package there are to most important function [https://github.com/sjwilczynski/varclust/blob/master/R/mlcc.reps.R](mlcc.reps) and [https://github.com/sjwilczynski/varclust/blob/master/R/mlcc.bic.R](mlcc.bic). You can check the documentation in the links. You can also check varclust's vignette for some more examples or [https://github.com/mstaniak/varclust_example](real data analysis).
+In the package there are to most important function [mlcc.reps](https://github.com/sjwilczynski/varclust/blob/master/R/mlcc.reps.R) and [mlcc.bic](https://github.com/sjwilczynski/varclust/blob/master/R/mlcc.bic.R). You can check the documentation in the links. You can also check varclust's vignette for some more examples or [real data analysis](https://github.com/mstaniak/varclust_example).
 
 ## How to use screen to run the simulations?
 
