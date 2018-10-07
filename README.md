@@ -34,8 +34,9 @@ The basic tutorial can be found [here](https://www.rackaid.com/blog/linux-screen
 First of all the computations are quite long. Do them on calc and remember to use screen. You can run the script using:
 
 ```bash
-Rscript data_analysis.R 8 28 28 30 "c(10,20,30,40)" "valerie_data.txt"
+Rscript script_varclust.R 8 25 40 30 "c(50,100,150,200,75,125,175,225,250)" "valerie_data.txt"
 ```
+where "valerie_data.txt" is the name of the file with our genetic data.
 
 The first argument is maximal subspace dimension, the second one is the number of cores of the processor to use to make the computation parallel (maximum on calc is 28 but it is probably a good idea not to use them all), next is the number of random initialization of our algorithm, then number of iterations within kmeans loop, next one is R array with number of clusters to test and the last argument is the name of the file with Valerie's data set.
 

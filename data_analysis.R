@@ -1,6 +1,6 @@
 # IMPORTANT: Run simulations using screen. The instruction is in README.md.
 
-# Usage example: Rscript script_varclust.R 8 28 40 30 "c(50,100,150,200,75,125,175,225,250)" "valerie_data.txt"
+# Usage example: Rscript script_varclust.R 8 25 40 30 "c(50,100,150,200,75,125,175,225,250)" "valerie_data.txt"
 library(varclust)
 
 args        <- commandArgs(trailingOnly = TRUE)
